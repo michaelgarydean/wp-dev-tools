@@ -1,0 +1,25 @@
+<?php
+/**
+ * Plugin Name:     WP Dev Tools
+ * Plugin URI:      https://github.com/mykedean/wp-dev-tools.git
+ * Description:     Functions and code to help while developing Wordpress plugins and themes
+ * Author:          Michael Gary Dean
+ * Author URI:      https://github.com/mykedean
+ * Text Domain:     wp-dev-tools
+ * Domain Path:     /languages
+ * Version:         0.1.0
+ *
+ * @package         Wp_Dev_Tools
+ */
+
+
+/*
+ * @param mixed $data Any PHP data to be printed to console.
+ */
+function debug_to_console($data) {
+    $output = $data;
+    if (is_array($output))
+        $output = implode(',', $output);
+
+    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+}

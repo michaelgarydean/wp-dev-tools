@@ -19,8 +19,8 @@
  * ex. debug_to_console(get_stylesheet_uri());
  * @see 		https://stackoverflow.com/questions/4323411/how-can-i-write-to-the-console-in-php
  * 
- * @param 		$data 	Any PHP data to be printed to console.
- * @returns 	void
+ * @return void
+ * @param mixed $data Any PHP data to be printed to console.
  */
 function debug_to_console($data) {
     $output = $data;
